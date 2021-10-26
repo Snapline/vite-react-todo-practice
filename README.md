@@ -28,3 +28,8 @@ yarn add antd -S
 Delete the abundant codes in the vite official demo.
 
 Vite会出现一个官方示例代码，需要将不相关的代码全部清理干净。
+
+## 3. Let's get started 开始开发
+import the antd css library in `main.jsx`.
+
+务必在`main.jsx`里引入antd的css样式库。
