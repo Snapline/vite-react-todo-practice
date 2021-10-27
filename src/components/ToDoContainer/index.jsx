@@ -4,7 +4,7 @@ import { CheckCircleTwoTone, CloseCircleTwoTone } from '@ant-design/icons'
 import { STATUS } from '../../config/status'
 
 const TodoContainer = (props) => {
-    const { todos = [], onOperate } = props;
+    const { todos = [], onOperate, filterStatus } = props;
 
     const handleData = (type, todoItem) => {
         switch (type) {
@@ -28,7 +28,9 @@ const TodoContainer = (props) => {
     }
 
     const showTodos = todos.filter(todo => {
-        return todo.status !== STATUS.IS_DELETE
+        return todo.status !== STATUS.IS_DELETE && 
+            filterStatus.indexOf(todo.status.toString()) > -1 &&
+            todo.content != ''
     })
     
     return(

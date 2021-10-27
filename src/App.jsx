@@ -1,9 +1,12 @@
 import React, { useState } from 'react'
 import ToDoItem from './components/ToDoItem'
 import TodoContainer from './components/TodoContainer'
+import TodoFilter from './components/TodoFilter'
+import { STATUS } from './config/status'
 
 function App() {
   const [ todos, setTodos ] = useState( [] )
+  const [ filterStatus, setFilterStatus ] = useState( `${STATUS.IS_CREATE},${STATUS.IS_DONE}` )
 
   const handleSubmit = (todoItem) => {
     console.log(todoItem)
@@ -19,11 +22,20 @@ function App() {
     setTodos(newTodos)
   }
 
+  const handleStatusChange = (status) => {
+    setFilterStatus(status)
+  }
+
   return (
     <div className="todo-app">
       <h2 className="todo-title"> to do list </h2>
       <ToDoItem onSubmit={handleSubmit} />
-      <TodoContainer todos={todos} onOperate={handleOperate}/>
+      <TodoFilter filterStatus={filterStatus} onFilterStatus={handleStatusChange} />
+      <TodoContainer 
+        filterStatus={filterStatus}
+        todos={todos} 
+        onOperate={handleOperate} 
+      />
     </div>
   )
 }

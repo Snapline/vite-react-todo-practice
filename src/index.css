@@ -44,5 +44,7 @@ body{
     border-bottom: none !important;
 }
 
-.todo-item-operate{
+.todo-filter{
+    display: flex;
+    margin:40px 0 10px 0;
 }
