@@ -12,7 +12,7 @@ or
 ```bash
 yarn create vite ${project_name} --template ${framework_name}
 ```
-
+---
 
 ### install packages and components library 安装依赖和组件库
 
@@ -34,7 +34,20 @@ import the antd css library in `main.jsx`.
 
 务必在`main.jsx`里引入antd的css样式库。
 
+------
 ### Import AntD  引入Ant Design
 Tips: Don't remember to import the icons with `import { CheckCircleTwoTone, CloseCircleTwoTone } from '@ant-design/icons'`
 
 注意：Ant Design正常引入，但是图标需要单独再次引入，使用`import { CheckCircleTwoTone, CloseCircleTwoTone } from '@ant-design/icons'`
+
+----
+### Question 问题
+**有时会遇到某些jsx文件无法热更新的问题，作为一个追踪点，思考如何解决或者看之后Vite是否会修复这个问题。**
+
+## 4. Deploy
+```bash
+yarn build
+```
+
+put the dist folder to the [Netlify](https://www.netlify.com/).
+
