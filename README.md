@@ -33,3 +33,8 @@ Vite会出现一个官方示例代码，需要将不相关的代码全部清理�
 import the antd css library in `main.jsx`.
 
 务必在`main.jsx`里引入antd的css样式库。
+
+### Import AntD  引入Ant Design
+Tips: Don't remember to import the icons with `import { CheckCircleTwoTone, CloseCircleTwoTone } from '@ant-design/icons'`
+
+注意：Ant Design正常引入，但是图标需要单独再次引入，使用`import { CheckCircleTwoTone, CloseCircleTwoTone } from '@ant-design/icons'`
